@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 
 const navItems = [
   { id: "mindset", label: "Mindset", number: "01" },
@@ -17,6 +18,7 @@ const navItems = [
 export function Navigation() {
   const [activeSection, setActiveSection] = useState("mindset");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,11 +55,28 @@ export function Navigation() {
               </motion.a>
             ))}
           </div>
-          <motion.a href="https://ecombrain.io" target="_blank" className="px-4 py-2 bg-gradient-to-r from-[#00f5ff] to-[#ff00ff] rounded-lg text-sm font-semibold text-black hover:opacity-90 transition-opacity" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            EcomBrain
-          </motion.a>
+          <div className="flex items-center gap-4">
+            <motion.a href="https://ecombrain.io" target="_blank" className="px-4 py-2 bg-gradient-to-r from-[#00f5ff] to-[#ff00ff] rounded-lg text-sm font-semibold text-black hover:opacity-90 transition-opacity" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              EcomBrain
+            </motion.a>
+            <motion.button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden w-10 h-10 flex items-center justify-center text-white" whileTap={{ scale: 0.9 }}>
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </motion.button>
+          </div>
         </div>
       </div>
+      {mobileMenuOpen && (
+        <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="md:hidden absolute top-full left-0 right-0 bg-[#030712]/95 backdrop-blur-lg border-b border-white/5">
+          <div className="flex flex-col p-4 space-y-2">
+            {navItems.map((item) => (
+              <motion.a key={item.id} href={`#${item.id}`} onClick={() => setMobileMenuOpen(false)} className={`px-4 py-3 rounded-lg text-sm transition-all duration-300 ${activeSection === item.id ? "bg-[#00f5ff]/10 text-[#00f5ff]" : "text-gray-400 hover:text-white hover:bg-white/5"}`} whileTap={{ scale: 0.95 }}>
+                <span className="text-xs text-gray-500 mr-2">{item.number}</span>
+                {item.label}
+              </motion.a>
+            ))}
+          </div>
+        </motion.div>
+      )}
     </motion.nav>
   );
 }

@@ -25,7 +25,7 @@ export function Footer() {
             <span className="text-white">?</span>
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto mb-8">
-            Dolacz do spolecznosci i zacznij budowac swoj system juz dzisiaj.
+            Dołącz do społeczności i zacznij budować swoj system juz dzisiaj.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -53,7 +53,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-white/5">
           <div className="text-gray-500 text-sm">
-            © 2026 Dawid Gac. All rights reserved.
+            © {new Date().getFullYear()} Dawid Gac. All rights reserved.
           </div>
           
           <div className="flex items-center gap-4">

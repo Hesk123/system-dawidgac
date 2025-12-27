@@ -74,7 +74,7 @@ export function Hero() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Dolacz do Discord
+            Dołącz do Discord
           </motion.a>
         </motion.div>
 

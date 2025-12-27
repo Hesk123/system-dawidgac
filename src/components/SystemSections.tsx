@@ -84,12 +84,12 @@ const sections: Section[] = [
     color: "#00f5ff",
     content: {
       checklist: [
-        "Rozwiazuje PRAWDZIWY problem",
-        "Ludzie chca to kupic DZISIAJ",
+        "Rozwiązuje PRAWDZIWY problem",
+        "Ludzie chca to kupić DZISIAJ",
         "3x markup mozliwy",
         "MRR element (opcjonalnie)",
       ],
-      insight: "Nie szukaj winnera. Znajdz produkt ktory spelnia te 3 warunki i SKUP SIE na execution.",
+      insight: "Nie szukaj winnera. Znajdź produkt ktory spełnia te 3 warunki i SKUP SIE na execution.",
     },
   },
   {
@@ -100,8 +100,8 @@ const sections: Section[] = [
     icon: Brain,
     color: "#ff00ff",
     content: {
-      definition: "Avatar to NIE 'kobieta 25-45 zainteresowana fitness'. To KONKRETNA grupa zjednoczona przez wspolny problem.",
-      example: { wrong: "Kobieta ktora chce schudnac", right: "Kobieta z PCOS walczaca z przyrostem wagi hormonalnej" },
+      definition: "Avatar to NIE 'kobieta 25-45 zainteresowana fitness'. To KONKRETNA grupa zjednoczona przez wspólny problem.",
+      example: { wrong: "Kobieta ktora chce schudnąć", right: "Kobieta z PCOS walcząca z przyrostem wagi hormonalnej" },
       research: ["Amazon Reviews (1 i 5 gwiazdek)", "Reddit / Fora (anonimowe prawdy)", "Facebook Groups", "Competitor Ads Analysis"],
     },
   },
@@ -115,8 +115,8 @@ const sections: Section[] = [
     content: {
       levels: [
         { name: "UNAWARE", desc: "Ma objawy, nie rozpoznaje problemu", approach: "Story + Edukacja" },
-        { name: "PROBLEM AWARE", desc: "Wie ze ma problem, nie zna rozwiazania", approach: "Agitacja + Rozwiazanie" },
-        { name: "SOLUTION AWARE", desc: "Zna rozwiazania, nie zna Twojego produktu", approach: "Mechanizm + Proof" },
+        { name: "PROBLEM AWARE", desc: "Wie ze ma problem, nie zna rozwiązania", approach: "Agitacja + Rozwiązanie" },
+        { name: "SOLUTION AWARE", desc: "Zna rozwiązania, nie zna Twojego produktu", approach: "Mechanizm + Proof" },
         { name: "PRODUCT AWARE", desc: "Zna Twoj produkt, nie kupil", approach: "Testimonials + Offer" },
         { name: "MOST AWARE", desc: "Kupowal, ufa Ci", approach: "Deal + Urgency" },
       ],
@@ -131,7 +131,7 @@ const sections: Section[] = [
     color: "#ff6b00",
     content: {
       mainPoint: "Hook → Story → Mechanism → CTA",
-      key: "Najlepsze reklamy mowia DO Twojego avatara, nie do wszystkich.",
+      key: "Najlepsze reklamy mówią DO Twojego avatara, nie do wszystkich.",
       angles: ["Pain Point", "Transformation", "Discovery", "Social Proof", "Us vs Them"],
     },
   },
@@ -139,7 +139,7 @@ const sections: Section[] = [
     id: "landing",
     number: "06",
     title: "LANDING PAGES",
-    subtitle: "Gdzie laduja klienci",
+    subtitle: "Gdzie lądują klienci",
     icon: Layout,
     color: "#00f5ff",
     content: {
@@ -357,7 +357,7 @@ function SectionContent({ section }: { section: Section }) {
         </AnimatedCard>
         <div className="space-y-4">
           <AnimatedCard delay={0.2}>
-            <h4 className="text-lg font-semibold mb-2 text-red-400">Slaba Oferta</h4>
+            <h4 className="text-lg font-semibold mb-2 text-red-400">Słaba Oferta</h4>
             <p className="text-gray-500">{content.example?.weak}</p>
           </AnimatedCard>
           <AnimatedCard delay={0.3} glowColor="lime">
