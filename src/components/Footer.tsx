@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Instagram, MessageCircle, Youtube, ExternalLink } from "lucide-react";
 
 const links = [
-  { icon: Youtube, label: "YouTube", href: "https://youtube.com/@DawidGac" },
+  { icon: Youtube, label: "YouTube", href: "https://youtube.com/@dawidgq" },
   { icon: Instagram, label: "Instagram", href: "https://instagram.com/dawidgq" },
   { icon: MessageCircle, label: "Discord", href: "https://discord.gg/JqQy5Emjcp" },
 ];
@@ -21,7 +21,7 @@ export function Footer() {
         >
           <h2 className="text-2xl md:text-3xl font-semibold mb-4 heading-large">
             <span className="text-white">Gotowy na </span>
-            <span className="text-[#00f5ff]">100k dziennie</span>
+            <span className="text-[#00f5ff]">50k PLN dziennie</span>
             <span className="text-white">?</span>
           </h2>
           <p className="text-gray-500 max-w-md mx-auto mb-10 text-sm leading-relaxed">

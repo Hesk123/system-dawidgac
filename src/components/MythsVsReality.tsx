@@ -36,7 +36,7 @@ const myths: MythReality[] = [
 const realities: MythReality[] = [
   {
     title: "Kazdy produkt moze dzialac",
-    expanded: "Z odpowiednim avatarem, reklama i oferta - nawet 'martwy' produkt moze robic 100k dziennie.",
+    expanded: "Z odpowiednim avatarem, reklama i oferta - nawet 'martwy' produkt moze robic 50k PLN dziennie.",
   },
   {
     title: "Saturacja = okazja",

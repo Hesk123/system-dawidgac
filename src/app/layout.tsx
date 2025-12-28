@@ -16,7 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "THE SYSTEM | Dawid Gac - Dropshipping Blueprint 2026",
-  description: "Jedyny system dropshipping, ktory potrzebujesz. Od 0 do 100k dziennie.",
+  description: "Jedyny system dropshipping, ktory potrzebujesz. Od 0 do 50k PLN dziennie.",
   openGraph: {
     title: "THE SYSTEM | Dawid Gac",
     description: "Jedyny system dropshipping na 2026",

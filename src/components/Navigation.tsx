@@ -6,13 +6,13 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { id: "mindset", label: "Mindset", number: "01", color: "#00f5ff" },
-  { id: "product", label: "Product", number: "02", color: "#ff6b00" },
-  { id: "avatar", label: "Avatar", number: "03", color: "#ff0080" },
-  { id: "awareness", label: "Awareness", number: "04", color: "#39ff14" },
-  { id: "ads", label: "Ads", number: "05", color: "#ff3355" },
-  { id: "landing", label: "Landing Pages", number: "06", color: "#ffd500" },
-  { id: "offer", label: "Offers", number: "07", color: "#a855f7" },
-  { id: "scaling", label: "Scaling", number: "08", color: "#0099ff" },
+  { id: "product", label: "Produkt", number: "02", color: "#ff6b00" },
+  { id: "competitor-research", label: "Research", number: "03", color: "#ff0080" },
+  { id: "store-building", label: "Sklep", number: "04", color: "#39ff14" },
+  { id: "facebook-structure", label: "Struktura FB", number: "05", color: "#ffd500" },
+  { id: "ad-testing", label: "Testowanie", number: "06", color: "#ff3355" },
+  { id: "scaling", label: "Skalowanie", number: "07", color: "#0099ff" },
+  { id: "team", label: "Zespol", number: "08", color: "#a855f7" },
 ];
 
 export function Navigation() {
