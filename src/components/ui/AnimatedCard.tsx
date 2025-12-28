@@ -8,25 +8,29 @@ interface AnimatedCardProps {
   children: ReactNode;
   className?: string;
   delay?: number;
-  glowColor?: "cyan" | "magenta" | "lime" | "orange";
+  accent?: boolean;
+  accentColor?: string;
 }
 
-export function AnimatedCard({ children, className, delay = 0, glowColor = "cyan" }: AnimatedCardProps) {
-  const glowClasses = {
-    cyan: "hover:shadow-[0_0_30px_rgba(0,245,255,0.3)]",
-    magenta: "hover:shadow-[0_0_30px_rgba(255,0,255,0.3)]",
-    lime: "hover:shadow-[0_0_30px_rgba(57,255,20,0.3)]",
-    orange: "hover:shadow-[0_0_30px_rgba(255,107,0,0.3)]",
-  };
-
+export function AnimatedCard({ children, className, delay = 0, accent = false, accentColor = "#00f5ff" }: AnimatedCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.6, delay, ease: "easeOut" }}
-      whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-      className={cn("glass-card p-6 transition-all duration-300", glowClasses[glowColor], className)}
+      transition={{ duration: 0.5, delay, ease: "easeOut" }}
+      whileHover={{
+        y: -2,
+        transition: { duration: 0.2 }
+      }}
+      className={cn(
+        "glass-card p-4 sm:p-5 md:p-6",
+        className
+      )}
+      style={accent ? {
+        borderColor: `${accentColor}30`,
+        boxShadow: `0 0 5px ${accentColor}15`
+      } : undefined}
     >
       {children}
     </motion.div>

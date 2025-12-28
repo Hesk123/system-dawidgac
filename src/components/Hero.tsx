@@ -6,112 +6,111 @@ import { ChevronDown } from "lucide-react";
 export function Hero() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center relative px-4 pt-20">
-      {/* Animated background orbs */}
+      {/* Subtle background gradient - single accent color */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#00f5ff]/20 rounded-full blur-[100px]"
-          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-          transition={{ duration: 8, repeat: Infinity }}
+          className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[600px] md:h-[600px] bg-[#00f5ff]/8 rounded-full blur-[80px] sm:blur-[100px] md:blur-[120px]"
+          animate={{ opacity: [0.4, 0.6, 0.4] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#ff00ff]/20 rounded-full blur-[100px]"
-          animate={{ scale: [1.2, 1, 1.2], opacity: [0.3, 0.5, 0.3] }}
-          transition={{ duration: 8, repeat: Infinity, delay: 2 }}
+          className="absolute bottom-1/4 left-1/4 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] bg-[#00f5ff]/5 rounded-full blur-[60px] sm:blur-[80px] md:blur-[100px]"
+          animate={{ opacity: [0.3, 0.5, 0.3] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         />
       </div>
 
-      <div className="relative z-10 text-center max-w-5xl mx-auto">
+      <div className="relative z-10 text-center max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-6"
+          transition={{ duration: 0.5 }}
+          className="mb-4 sm:mb-6 md:mb-8"
         >
-          <span className="px-4 py-2 rounded-full border border-[#00f5ff]/30 text-[#00f5ff] text-sm font-medium bg-[#00f5ff]/5">
+          <span className="accent-badge">
             DROPSHIPPING BLUEPRINT 2026
           </span>
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight"
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 md:mb-8 heading-large"
         >
-          <span className="text-white">THE </span>
-          <span className="text-[#00f5ff] text-glow-cyan">SYSTEM</span>
+          <span className="text-[#00f5ff]">SYSTEM</span>
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto"
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-base sm:text-lg md:text-xl text-gray-400 mb-6 sm:mb-8 md:mb-10 max-w-xs sm:max-w-lg md:max-w-2xl mx-auto leading-relaxed"
         >
-          Jedyny system dropshipping, ktory potrzebujesz.
-          <br />
-          <span className="text-white font-semibold">Od 0 do 100k dziennie.</span>
+          Zbuduj system wielu sklepow, ktore pracuja za Ciebie.
+          <br className="hidden sm:block" />
+          <span className="text-white font-medium">Pelna automatyzacja od A do Z.</span>
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+          transition={{ duration: 0.6, delay: 0.45 }}
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16 md:mb-20"
         >
           <motion.a
             href="#mindset"
-            className="px-8 py-4 bg-gradient-to-r from-[#00f5ff] to-[#00f5ff]/80 rounded-xl text-black font-bold text-lg hover:opacity-90 transition-all glow-cyan"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="px-6 py-3 sm:px-8 sm:py-4 btn-primary rounded-xl text-sm sm:text-base"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
             Zacznij od podstaw
           </motion.a>
           <motion.a
             href="https://discord.gg/JqQy5Emjcp"
             target="_blank"
-            className="px-8 py-4 border border-white/20 rounded-xl text-white font-bold text-lg hover:bg-white/5 transition-all"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="px-6 py-3 sm:px-8 sm:py-4 btn-secondary rounded-xl text-sm sm:text-base"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
-            Dołącz do Discord
+            Dolacz do Discord
           </motion.a>
         </motion.div>
 
-        {/* Stats */}
+        {/* Stats - cleaner presentation */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="grid grid-cols-3 gap-8 max-w-2xl mx-auto"
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="grid grid-cols-3 gap-4 sm:gap-8 md:gap-12 max-w-xs sm:max-w-md md:max-w-lg mx-auto"
         >
           {[
             { value: "5+", label: "Sklepow" },
-            { value: "1M+", label: "PLN/Miesiac" },
-            { value: "100k", label: "Dziennie" },
+            { value: "1M", label: "Cel PLN" },
+            { value: "100%", label: "Automatyzacja" },
           ].map((stat, i) => (
             <div key={i} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[#00f5ff]">{stat.value}</div>
-              <div className="text-gray-500 text-sm">{stat.label}</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#00f5ff] mb-1">{stat.value}</div>
+              <div className="text-gray-500 text-xs sm:text-sm tracking-wide">{stat.label}</div>
             </div>
           ))}
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator - more subtle */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        transition={{ delay: 1.2 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2"
       >
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="flex flex-col items-center gap-2 text-gray-500"
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+          className="flex flex-col items-center gap-2 text-gray-600"
         >
-          <span className="text-xs">SCROLL</span>
-          <ChevronDown className="w-5 h-5" />
+          <span className="text-xs tracking-widest uppercase">Scroll</span>
+          <ChevronDown className="w-4 h-4" />
         </motion.div>
       </motion.div>
     </section>
