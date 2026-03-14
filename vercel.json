@@ -3,14 +3,12 @@
     {
       "source": "/",
       "destination": "https://dawidgac.com/system",
-      "permanent": true,
-      "statusCode": 301
+      "permanent": true
     },
     {
       "source": "/:path*",
       "destination": "https://dawidgac.com/system",
-      "permanent": true,
-      "statusCode": 301
+      "permanent": true
     }
   ]
 }
